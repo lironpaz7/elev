@@ -17,11 +17,20 @@ export default class Game extends React.Component {
       callButtons: null,
       numFloors: numFloors,
       numElevators: numElevators,
+      callStack: [],
       counter: 0
     }
   }
 
-  getClosestElevator(elevators, currentFloor) {
+  getClosestElevator(elevators) {
+    // get first queue element -> first floor in the line
+    let currentFloor = null;
+    const callStack = this.state.callStack;
+    if(this.state.callStack.length > 0){
+      currentFloor = callStack[0];
+    }else{
+      return null;
+    }
     let closestElevator = null;
     let closestDist = null;
     for (let i = 0; i < elevators.length; i++) {
@@ -37,6 +46,9 @@ export default class Game extends React.Component {
     }
     closestElevator.targetFloor = currentFloor;
     closestElevator.isMoving = true;
+    // removes the floor from the queue as it got an elevator.
+    callStack.shift();
+    this.setState({callStack: callStack});
     return closestElevator;
   }
 
@@ -91,6 +103,9 @@ export default class Game extends React.Component {
   handleClick(i) {
     const squares = [...this.state.squares];
     const elevators = [...this.state.elevators];
+    const callStack = this.state.callStack;
+    callStack.push(i);
+    this.setState({callStack: callStack});
     const elevator = this.getClosestElevator(elevators, i);
     this.forceUpdate();
   }
