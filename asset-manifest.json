@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/elev/static/css/main.05ce870a.css",
+    "main.js": "/elev/static/js/main.b5ae9a2c.js",
+    "static/media/elevator_arrived.wav": "/elev/static/media/elevator_arrived.b222ebf03a29c11b61f0.wav",
+    "static/media/icons8-elevator.svg": "/elev/static/media/icons8-elevator.174728f9202f2ccbdd154792c544e84f.svg",
+    "index.html": "/elev/index.html",
+    "main.05ce870a.css.map": "/elev/static/css/main.05ce870a.css.map",
+    "main.b5ae9a2c.js.map": "/elev/static/js/main.b5ae9a2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05ce870a.css",
+    "static/js/main.b5ae9a2c.js"
+  ]
+}
