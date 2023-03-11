@@ -5,12 +5,12 @@ import '../index.css';
 export default function Square(props) {
 
   return (
-    <button className={"square " + props.shade}
-      onClick={props.onClick}
+    <button className={"tile"}
+      i={props.i}
+      j={props.j}
       style={props.style}
       key={props.keyVal}
     >
-
     </button>
   );
 

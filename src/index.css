@@ -18,22 +18,48 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-.square {
+.tile {
   background: transparent;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
+  border-color: rgb(187, 187, 187);
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 48px;
+  height: 60px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 48px;
+  width: 100px;
 }
 
-.square:focus {
+.tileBtn {
+  background: rgb(31, 211, 14);
+  border: 2px solid transparent;
+  border-color: rgb(0, 0, 0);
+  font-size: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 50px;
+  flex: auto;
+  margin-left: 10px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+}
+
+.tileBtn:hover{
+  background-color: rgb(72, 255, 0);
+}
+
+.tile .img{
+  object-fit: inherit;
+}
+
+
+.tile:focus {
   outline: none;
 }
 
@@ -49,17 +75,6 @@ ol, ul {
 .icons-attribution, .game-status, .fallen-soldier-block{
   margin-top: 20px;
   min-height: 50px;
-}
-
-
-
-/*Board color scheme Wheat from http://omgchess.blogspot.com/2015/09/chess-board-color-schemes.html*/
-.dark-square{
-background-color: RGB(187,190,100);
-}
-
-.light-square{
-    background-color: RGB(234,240,206);
 }
 
 #player-turn-box{
