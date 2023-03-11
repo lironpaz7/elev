@@ -53,7 +53,7 @@ export default class Board extends React.Component {
     if (changeCounter > 0) {
       setTimeout(()=>{
         this.props.updateState(squares, elevators);
-      }, 400)
+      }, 150)
       
     }
   }
